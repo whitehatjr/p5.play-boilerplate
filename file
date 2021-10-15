@@ -1,0 +1,27 @@
+var uno, dos;
+
+function setup() {
+  createCanvas(800,400);
+ uno=createSprite(400, 300, 50, 50);
+ uno.shapeColor="green";
+ dos= createSprite(300,300,100,60);
+  dos.shapeColor="green";
+}
+
+function draw() {
+  background(255,255,255);  
+  dos.x=World.mouseX;
+  dos.y=World.mouseY;
+if ((uno.width/2+dos.width/2)>(dos.x-uno.x)){
+  uno.shapeColor="red";
+  dos.shapeColor="red";
+  
+}
+else
+dos.shapeColor="green";
+uno.shapeColor="green";
+
+  drawSprites();
+}
+
+
